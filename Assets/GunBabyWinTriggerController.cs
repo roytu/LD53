@@ -26,11 +26,9 @@ public class GunBabyWinTriggerController : MonoBehaviour
             }
             if (isWonTimer <= 0f)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("TransitionScene");
             }
         }
-
-        
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
