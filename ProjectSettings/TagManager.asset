@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - GunBabyWinTrigger
+  - Boundary
+  - House
+  - Person
+  - Outhouse
+  - Car
   layers:
   - Default
   - TransparentFX
