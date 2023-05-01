@@ -8,6 +8,7 @@ public class Baby : MonoBehaviour
     // Start is called before the first frame update
     private Animator animator;
     private Rigidbody rigidbody;
+    public AudioSource backgroundMusic;
 
     private float distToGround;
     private float timeSinceJump = 0f;
@@ -51,6 +52,8 @@ public class Baby : MonoBehaviour
         if (collision.collider.CompareTag("Car"))
         {
             FindObjectOfType<CarSpawner>().Die();
+            GetComponent<AudioSource>().Play();
+            backgroundMusic.Stop();
         }
     }
 }

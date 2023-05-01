@@ -9,12 +9,8 @@ public class CarSpawner : MonoBehaviour
     public GameObject warningImage;
     public float warningTimer = 0f;
 
-    public bool[] wasSpawned = {
-        false,
-        false,
-        false,
-        false
-    };
+    public List<bool> wasSpawned;
+    public GameObject particleSystem;
 
     public enum State
     {
@@ -24,11 +20,16 @@ public class CarSpawner : MonoBehaviour
     };
     public State state = State.PLAYING;
 
-    private GameObject deathText;
-    private GameObject winText;
+    public GameObject deathText;
+    public GameObject winText;
 
     void Start()
     {
+        wasSpawned = new List<bool>();
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
         warningImage.SetActive(false);
     }
 
@@ -88,6 +89,8 @@ public class CarSpawner : MonoBehaviour
         {
             state = State.WON;
             winText.SetActive(true);
+            GetComponent<AudioSource>().Play();
+            particleSystem.SetActive(true);
         }
     }
 }
