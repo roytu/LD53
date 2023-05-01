@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class DroneController : MonoBehaviour
 {
+    // Drone tilt for aesthetics
+    [SerializeField] private float maxTiltAngle = 15f;
+    [SerializeField] private float tiltSmoothingSpeed = 5f;
+
+    // Audio stuff
+    [SerializeField] private AudioSource droneAudioSource;
+    [SerializeField] private Rigidbody2D droneRigidbody;
+    [SerializeField] private float pitchChangeSpeed = 0.1f;
+    private float basePitch;
+
     //[SerializeField]
     //private UnityEngine.UI.RawImage packageImage;
     [SerializeField]
@@ -22,16 +32,28 @@ public class DroneController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gameManager = FindObjectOfType<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        basePitch = droneAudioSource.pitch;
+        droneAudioSource.loop = true;
     }
 
     private void Update()
     {
+        // Audio stuff
+        float pitchChange = Mathf.Clamp(Mathf.Abs(droneRigidbody.velocity.x) * pitchChangeSpeed, 0f, 1f);
+        droneAudioSource.pitch = basePitch + pitchChange;
+
         // Movement Controls
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(horizontalInput, verticalInput);
         rb.velocity = movement * moveSpeed;
+
+        // Drone tilt
+        float targetRotationZ = -horizontalInput * maxTiltAngle;
+        Quaternion targetRotation = Quaternion.Euler(0, 0, targetRotationZ);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, tiltSmoothingSpeed * Time.deltaTime);
+
 
         // Package Drop Controls
         if (gameManager.totalPackages > 0 && (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1")))
