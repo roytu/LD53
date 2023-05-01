@@ -5800,7 +5800,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 2217bf70e136f3e4c8ede6925e27f384, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6326,6 +6326,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: ControlsRSpace
       objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726473426951321692, guid: 230179a8d64a6034182cf967ae60ac25,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 230179a8d64a6034182cf967ae60ac25, type: 3}
 --- !u!224 &2037090673 stripped
@@ -6614,10 +6644,11 @@ AudioSource:
   m_GameObject: {fileID: 919132149548718281}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6123854592077494067, guid: 985042ce004f2ca458cc9a53a34dafe4,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 9d02fc1879d02fd42993e44f8b64e655, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
