@@ -7,7 +7,9 @@ public class PackageController : MonoBehaviour
     public enum PackageStatus { None, Delivered, WrongDelivery, KnockedOutPerson }
     public PackageStatus packageStatus = PackageStatus.None;
     public int packageId;
+    public AudioClip hitSound;
 
+    private AudioSource audioSource;
     private Rigidbody2D rb;
     private GameManager gameManager;
 
@@ -15,6 +17,7 @@ public class PackageController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gameManager = FindObjectOfType<GameManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -27,19 +30,20 @@ public class PackageController : MonoBehaviour
                 houseController.packageDelivered = true;
                 packageStatus = PackageStatus.Delivered;
                 gameManager.PackageDelivered(packageId, houseController.houseNumber);
-
+                PlayHitSound();
             }
             else
             {
                 packageStatus = PackageStatus.WrongDelivery;
                 gameManager.WrongDelivery(packageId);
+                PlayHitSound();
             }
         }
         else if (other.gameObject.CompareTag("Outhouse"))
         {
             packageStatus = PackageStatus.WrongDelivery;
             gameManager.DeliveredToOuthouse(packageId);
-
+            PlayHitSound();
         }
         else if (other.gameObject.CompareTag("Person"))
         {
@@ -60,5 +64,10 @@ public class PackageController : MonoBehaviour
             //rb.angularVelocity = 0f;
             //gameObject.layer = LayerMask.NameToLayer("DeliveredPackage");
         }
+    }
+
+    private void PlayHitSound()
+    {
+        audioSource.PlayOneShot(hitSound, 2);
     }
 }

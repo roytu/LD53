@@ -33,6 +33,6 @@ public class PersonController : MonoBehaviour
 
     private void PlayHitSound()
     {
-        audioSource.PlayOneShot(hitSound);
+        audioSource.PlayOneShot(hitSound, 2);
     }
 }
