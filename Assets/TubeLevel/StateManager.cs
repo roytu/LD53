@@ -106,10 +106,5 @@ void Update()
         Object.Instantiate(prefabDrop, dropSpawn);
         hand.SetTrigger("Drop");
     }
-    
-    if (Input.GetKeyDown(KeyCode.Escape))
-    {
-        SceneManager.LoadScene("GameSelectScene");
-    }
 }
 }

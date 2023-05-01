@@ -400,7 +400,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.7
+  orthographic size: 4.735
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -711,7 +711,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012029409, y: -0.111272216}
+  m_Offset: {x: -0.012029409, y: -0.33229047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -722,7 +722,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4092641, y: 2.7533963}
+  m_Size: {x: 0.4092641, y: 2.31136}
   m_EdgeRadius: 0
 --- !u!1 &619394800
 GameObject:
@@ -942,6 +942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676426683}
   - component: {fileID: 676426682}
+  - component: {fileID: 676426684}
   m_Layer: 0
   m_Name: StateManager
   m_TagString: Untagged
@@ -964,10 +965,12 @@ MonoBehaviour:
   goSpace: {fileID: 232745956}
   vial: {fileID: 603650798}
   goObjective: {fileID: 1429889814}
-  babbyFormedSprite: {fileID: -1271610591, guid: 3c3662a6cbf68814d9d07bece222e5bd, type: 3}
+  babbyFormedSprite: {fileID: -1271610591, guid: 3c3662a6cbf68814d9d07bece222e5bd,
+    type: 3}
   goWinFail: {fileID: 1983129645}
   hand: {fileID: 1735142752}
-  prefabDrop: {fileID: 6614532060217226700, guid: 4918ab8d10a5d7f4f93f9af9477f4602, type: 3}
+  prefabDrop: {fileID: 6614532060217226700, guid: 4918ab8d10a5d7f4f93f9af9477f4602,
+    type: 3}
   music: {fileID: 1199439515}
   dropSpawn: {fileID: 620323081}
   timer: 0
@@ -989,6 +992,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &676426684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676426681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfde838bad2c6aa4c818898f7233f1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &759002084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,7 +1989,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
+    type: 3}
   m_Color: {r: 0.4117647, g: 0.41568628, b: 0.41568628, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1993,8 +2009,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052448596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36182553, y: -2.36, z: 0}
-  m_LocalScale: {x: 11.737, y: 2.45, z: 1}
+  m_LocalPosition: {x: 0.36182553, y: -23.6236, z: 0}
+  m_LocalScale: {x: 110, y: 44.9771, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
