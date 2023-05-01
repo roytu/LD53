@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject endScreenBackground;
     [SerializeField]
+    private GameObject endScreenTitle;
+    [SerializeField]
     private GameObject replayButton;
     [SerializeField]
     private DeliveryMessageAsset deliveryMessageAsset;
@@ -100,6 +102,7 @@ public class GameManager : MonoBehaviour
         endScreenText.gameObject.SetActive(true);
         endScreenBackground.SetActive(true);
         replayButton.SetActive(true);
+        endScreenTitle.SetActive(true);
         fader.FadeOut();
     }
 }
