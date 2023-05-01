@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed5d33aea1101648946bcd3ac1e6142, type: 3}
+  m_Name: DeliveryMessages
+  m_EditorClassIdentifier: 
+  successfulDeliveries:
+  - 'Catherine''s birthday present from her father, who lives out of state, was successfully
+    delivered to {address}.
+
+'
+  - 'Eliza and Thomas'' camping equipment for themselves and their two kids was successfully
+    delivered to {address}.
+
+'
+  - 'A box of chocolates from Meyer''s Grandma, along with a sweet note, was successfully
+    delivered to {address}.
+
+'
+  - "The long-awaited novel that Jane had pre-ordered a year ago finally arrived
+    at {address}. \r\n\n"
+  - "A video game that Taylor bought for his little brother was successfully delivered
+    to {address}. \r\n\n"
+  - 'A beautiful bouquet of roses for Sarah and John''s anniversary was successfully
+    delivered to {address}.
+
+
+'
+  - 'The collector''s edition action figure that Max always wanted arrived at {address}.
+
+'
+  - 'A care package filled with home-baked cookies from Emily''s mom was successfully
+    delivered to {address}.
+
+'
+  - 'The special edition sneakers Alex had been eyeing finally arrived at {address}.
+
+'
+  - 'An assortment of art supplies for budding artist, Lily, was successfully delivered
+    to {address}.
+
+'
+  - 'The much-anticipated board game Dune: Imperium for family game night was successfully
+    delivered to {address}.
+
+'
+  - 'A package containing cherished family photos was safely delivered to {address}.
+
+'
+  - 'A custom-made cake topper for Olivia and Ethan''s wedding arrived at {address}.
+
+'
+  - 'Grandpa Micah''s favorite book, a signed copy, was successfully delivered to
+    {address} just in time for his birthday.
+
+'
+  - 'The latest best-selling cookbook arrived at {address} for Daniel.
+
+'
+  - 'A gift-wrapped box of assorted teas from around the world was successfully delivered
+    to Maxine at {address}.
+
+'
+  - 'A box of vinyl records, carefully curated by a dear friend, arrived at {address}
+    for Richard.
+
+'
+  - 'A heartwarming care package from overseas arrived at {address} for the Johnson
+    family.
+
+'
+  - 'A long-lost teddy bear, found and returned by a kind stranger, was successfully
+    delivered to {address}.
+
+'
+  - 'The long-distance gift exchange package for Mary was successfully delivered
+    to {address}.
+
+'
+  - 'A thoughtful care package filled with comfort items for Christopher from his
+    aunt was successfully delivered to {address}.
+
+'
+  - 'A basket filled with fresh fruits and vegetables from a local farm arrived for
+    Jeremy at {address}.
+
+'
+  - 'A custom-made puzzle featuring a cherished memory for Ben from his brother arrived
+    at {address}.
+
+'
+  - 'A box of delightful new cat toys for the family''s beloved three kitties was
+    successfully delivered to {address}.
+
+'
+  - Joan's diabetes medication was successfully delivered to {address}.
+  wrongDeliveries:
+  - Michael's barbecue equipment was delivered to the wrong address.
+  - 'Pamela''s birthday present from her mother never arrived to her address.
+
+'
+  - 'Jonathan and Victor received a self-help book instead of their camping gear,
+    leaving them unprepared for their family trip.
+
+'
+  - 'Jessica''s little brother was expecting a video game, but he received a package
+    of kitchen utensils.
+
+'
+  - 'Tiffany and John''s anniversary roses never arrived, and instead they received
+    a set of workout equipment.
+
+'
+  - 'A box of much-needed textbooks for Rachel''s semester was mistakenly delivered
+    to her neighbor.
+
+'
+  - 'Erin''s crucial business documents went to the wrong address, leaving her in
+    a difficult situation.
+
+'
+  - 'Sophia''s graduation gown and cap were mistakenly sent to a different house,
+    causing last-minute stress.
+
+'
+  - 'A much-awaited package of sewing supplies for Grace''s crafts was delivered
+    to the wrong address.
+
+'
+  - 'Hannah''s long-distance boyfriend sent her a lovely care package, but it was
+    mistakenly delivered to a different house.
+
+'
+  - 'The custom-made suit that Robert ordered for his sister''s wedding was delivered
+    to the wrong address.
+
+'
+  - 'Noah''s package containing a signed book from his favorite author went astray,
+    leaving him disheartened.
+
+    
+
+    
+
+    
+
+'
+  - 'Veronica was expecting her late mother''s heirlooms, but they were mistakenly
+    delivered to the wrong address.
+
+'
+  - 'The beautiful flowers David ordered to surprise his wife on their anniversary
+    were mistakenly sent to a different house.
+
+'
+  - 'Zoe''s long-awaited letter and gift from her distant pen pal never arrived because
+    it was delivered to the wrong house.
+
+'
+  - 'Abigail''s package with a rare family photo album was delivered to the wrong
+    address, causing her heartache.
+
+'
+  - 'The last gift Sam''s childhood friend sent before moving away was mistakenly
+    delivered to a different house, leaving him sad and disappointed.
+
+'
+  - 'A package of cherished mementos that Claire had left at her old home was delivered
+    to the wrong address, causing her much distress.
+
+    
+
+    
+
+    
+
+'
+  outhouseDeliveries:
+  - Twelve boxes of 0.22LR were left by the outhouse.
+  - 'A crate of freshly picked apples intended for a local charity event was left
+    by the outhouse.
+
+'
+  - 'The collector''s edition board game that Jack had saved up for was dumped by
+    the outhouse.
+
+'
+  - 'A package containing treasured family recipes that Grace sent to her cousin
+    ended up by the outhouse.
+
+'
+  - 'Chris''s much-anticipated order of art supplies was mistakenly left near the
+    outhouse.
+
+'
+  - 'A shipment of handmade candles meant for Sarah''s small business was found by
+    the outhouse.
+
+'
+  - 'A box of hard-to-find spices that Emma ordered for her cooking class was left
+    next to the outhouse.
+
+'
+  - 'The custom-designed dress that Isabella was planning to wear at her friend''s
+    wedding was dropped off by the outhouse.
+
+'
+  - 'A bundle of cozy blankets and warm clothes for Olivia''s winter vacation was
+    mistakenly delivered to the outhouse.
+
+'
+  - 'A care package filled with Ryan''s favorite snacks from home was found abandoned
+    by the outhouse.
+
+'
+  - 'The signed copy of Amelia''s favorite book that she had been eagerly waiting
+    for was left by the outhouse.
+
+'
+  - 'Daniel''s new hiking boots for his upcoming trip were dumped next to the outhouse.
+
+'
+  - 'The gardening tools Hannah had ordered for her grandmother were mistakenly left
+    by the outhouse.
+
+'
+  - 'A set of vintage postcards that Benjamin had planned to surprise his wife with
+    ended up by the outhouse.
+
+'
+  - 'A shipment of delicate glass ornaments intended for Ella''s holiday decorations
+    was found near the outhouse.
+
+'
+  - 'The new bicycle helmet that Noah had been excited to receive was mistakenly
+    delivered to the outhouse.
+
+'
+  - 'A collection of classic movies on DVD meant for Ethan''s film night was left
+    by the outhouse.
+
+'
+  - 'The custom-made jewelry that Lily had ordered for her mother''s birthday was
+    dumped near the outhouse.
+
+'
+  - 'A package containing a new set of paints for Ava''s art studio was mistakenly
+    left by the outhouse.
+
+'
+  - 'The replacement parts for Sophia''s vintage car were found abandoned next to
+    the outhouse.
+
+'
+  - 'A box of limited-edition comic books meant for Lucas ended up being delivered
+    to the outhouse.
+
+    
+
+    
+
+    
+
+'
