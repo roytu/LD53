@@ -24,11 +24,11 @@ public class GunBaby : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        float dt = Time.deltaTime * 500f;
         if (Input.GetKey(KeyCode.W) && CanControl())
         {
             Vector3 force = CalculateForce(bottomThruster.transform.position);
-            torso.AddForceAtPosition(force, bottomThruster.transform.position);
+            torso.AddForceAtPosition(force * dt, bottomThruster.transform.position);
 
             bottomAnimator.SetBool("isFiring", true);
         } else {
@@ -38,7 +38,7 @@ public class GunBaby : MonoBehaviour
         if (Input.GetKey(KeyCode.A) && CanControl())
         {
             Vector3 force = CalculateForce(leftThruster.transform.position);
-            torso.AddForceAtPosition(force, leftThruster.transform.position);
+            torso.AddForceAtPosition(force * dt, leftThruster.transform.position);
 
             leftAnimator.SetBool("isFiring", true);
         } else {
@@ -47,7 +47,7 @@ public class GunBaby : MonoBehaviour
         if (Input.GetKey(KeyCode.D) && CanControl())
         {
             Vector3 force = CalculateForce(rightThruster.transform.position);
-            torso.AddForceAtPosition(force, rightThruster.transform.position);
+            torso.AddForceAtPosition(force * dt, rightThruster.transform.position);
 
             rightAnimator.SetBool("isFiring", true);
         } else {
@@ -57,7 +57,7 @@ public class GunBaby : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && CanControl())
         {
             float torque = -(torso.rotation - 90f) * 10f;
-            torso.AddTorque(torque);
+            torso.AddTorque(torque * dt);
         }
 
         if (Input.GetKey(KeyCode.R) && CanControl())
