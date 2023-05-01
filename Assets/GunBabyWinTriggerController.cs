@@ -8,6 +8,8 @@ public class GunBabyWinTriggerController : MonoBehaviour
     public GameObject fireSystem;
     public bool isWon = false;
     private float isWonTimer = 0f;
+    public GameObject winText;
+    private bool didFoom = false;
     void Start()
     {
         
@@ -23,6 +25,12 @@ public class GunBabyWinTriggerController : MonoBehaviour
             if (isWonTimer < 5f)
             {
                 fireSystem.SetActive(true);
+                if (!didFoom)
+                {
+                    didFoom = true;
+                    GetComponent<AudioSource>().Play();
+                }
+                winText.SetActive(true);
             }
             if (isWonTimer <= 0f)
             {

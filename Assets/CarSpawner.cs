@@ -9,14 +9,27 @@ public class CarSpawner : MonoBehaviour
     public GameObject warningImage;
     public float warningTimer = 0f;
 
-    public bool[] wasSpawned = {
-        false,
-        false,
-        false
+    public List<bool> wasSpawned;
+    public GameObject particleSystem;
+
+    public enum State
+    {
+        PLAYING,
+        WON,
+        DEAD
     };
+    public State state = State.PLAYING;
+
+    public GameObject deathText;
+    public GameObject winText;
 
     void Start()
     {
+        wasSpawned = new List<bool>();
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
+        wasSpawned.Add(false);
         warningImage.SetActive(false);
     }
 
@@ -38,6 +51,15 @@ public class CarSpawner : MonoBehaviour
             wasSpawned[2] = true;
             SpawnCar();
         }
+        if (t > 25f && !wasSpawned[3])
+        {
+            wasSpawned[3] = true;
+            SpawnCar();
+        }
+        if (t > 30f)
+        {
+            Win();
+        }
 
         warningTimer -= Time.deltaTime;
         if (warningTimer <= 0f)
@@ -51,5 +73,24 @@ public class CarSpawner : MonoBehaviour
         Instantiate(car, transform.position, Quaternion.identity);
         warningTimer = 2f;
         warningImage.SetActive(true);
+    }
+
+    public void Die()
+    {
+        if (state == State.PLAYING)
+        {
+            state = State.DEAD;
+            deathText.SetActive(true);
+        }
+    }
+    public void Win()
+    {
+        if (state == State.PLAYING)
+        {
+            state = State.WON;
+            winText.SetActive(true);
+            GetComponent<AudioSource>().Play();
+            particleSystem.SetActive(true);
+        }
     }
 }
